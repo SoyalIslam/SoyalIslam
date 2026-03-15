@@ -1,0 +1,67 @@
+<svg fill="none" viewBox="0 0 400 100" width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes slideUp {
+          0% { transform: translateY(20px); opacity: 0; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes glow {
+          0%, 100% { text-shadow: 0 0 10px #28A745, 0 0 20px #28A745; }
+          50% { text-shadow: 0 0 20px #1793D1, 0 0 40px #1793D1; }
+        }
+        @keyframes borderRotate {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .container {
+          font-family: 'Fira Code', 'Segoe UI', sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100px;
+          background: transparent;
+        }
+
+        .card {
+          position: relative;
+          padding: 10px 20px;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .card::before {
+          content: '';
+          position: absolute;
+          inset: -1px;
+          border-radius: 11px;
+          padding: 1px;
+          background: linear-gradient(90deg, #28A745, #1793D1, #28A745);
+          background-size: 200% 200%;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          animation: borderRotate 4s linear infinite;
+        }
+
+        h3 {
+          color: #fff;
+          margin: 0;
+          font-size: 1.5em;
+          animation: glow 3s ease-in-out infinite;
+        }
+      </style>
+      <div class="container">
+        <div class="card">
+          <h3>📊 System Status</h3>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

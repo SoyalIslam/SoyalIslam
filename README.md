@@ -66,7 +66,7 @@
 ---
 
 <p align="left">
-  <img src="status-animation.svg" alt="System Status Animation" />
+  <img src="status-header.svg" alt="Github Status" />
 </p>
 
 <p align="left">
@@ -81,7 +81,7 @@
 ---
 
 <p align="left">
-  <img src="profile-animation.svg" alt="System Profile Animation" />
+  <img src="profile-header.svg" alt="System Profile" />
 </p>
 
 <p align="left">
@@ -129,6 +129,10 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/soyalislam/soyalislam/output/github-snake-tokyonight.svg" />
     <img alt="github-snake" src="https://raw.githubusercontent.com/soyalislam/soyalislam/output/github-snake-tokyonight.svg" />
   </picture>
+</p>
+
+<p align="left">
+  <i>> [!] Protocol: Contribution Snake is set to avoid critical commits.</i>
 </p>
 
 ---
